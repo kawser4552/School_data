@@ -1,0 +1,44 @@
+b{% extends 'base.html' %}
+
+
+
+{% block body %}
+  
+<form action="" method="POST">
+
+
+
+  {% csrf_token %}
+
+  <div class="container">
+  
+
+    
+    <table class="table table-hover">
+      
+        
+        <tr><td>Name :</td></tr>
+        <tr  class="table-success"><td>{{forms.name}}</td></tr>
+        <tr><td>Age :</td></tr>
+        <tr  class="table-success"><td>{{forms.age}}</td></tr>
+        <tr><td> Email :</td></tr>
+        <tr  class="table-success"><td>{{forms.Student_Email}}</td></tr>
+        <tr><td>Mobile No :</td></tr>
+        <tr  class="table-success"><td>{{forms.mobile_no}}</td></tr>
+        <tr><td>Id NO :</td></tr>
+        <tr  class="table-success"><td>{{forms.Id_no}}</td></tr>
+      
+  
+      <tr>
+        <td><button class="btn btn-success">Submit</button> 
+        </tr>
+    </table>
+       
+  </div>
+</form>
+  
+
+
+{% endblock body %}
+  
+

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="container">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Student No</th>
+        <th scope="col">Name</th>
+        
+
+        
+      </tr>
+    </thead>
+    
+    {% for i in student %}
+        
+    
+        
+    <tbody>
+      <tr>
+        <th scope="row"> {{i.id}}</th>
+        <td><a style="color: aliceblue;" href="{% url 'dataapp:details' id=i.id %}">{{i.name}}</a></td>
+        
+        
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
+
+
+    
+{% endblock body %}
+    
